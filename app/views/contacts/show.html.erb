@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Agent:</strong>
+  <%= @contact.agent %>
+</p>
+
+<p>
+  <strong>County:</strong>
+  <%= @contact.county %>
+</p>
+
+<%= link_to 'Edit', edit_contact_path(@contact) %> |
+<%= link_to 'Back', contacts_path %>

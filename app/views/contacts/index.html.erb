@@ -1,0 +1,32 @@
+<h1>Listing contacts</h1>
+
+<div class="contact_chose">
+  <%= render_contact_chose %>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Agent</th>
+      <th>County</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contacts.each do |contact| %>
+      <tr>
+        <td><%= contact.agent_name %></td>
+        <td><%= contact.county %></td>
+        <td><%= link_to 'Show', contact %></td>
+        <td><%= link_to 'Edit', edit_contact_path(contact) %></td>
+        <td><%= link_to 'Destroy', contact, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Choose', contact_choose_path(contact), method: :put, remote: true %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Contact', new_contact_path %>
