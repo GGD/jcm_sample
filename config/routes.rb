@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   resources :contacts do
     put :choose
   end
+
+  resources :news, only: :index
 end
