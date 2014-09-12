@@ -1,3 +1,6 @@
 1. run 'rake dev:build'  
-2. for Q1, open 'http://localhost:3000/contacts'
-3. for Q2, open 'http://localhost:3000/news'
+2. run 'rake fake:all' for fake data  
+2. for Q1, open 'http://localhost:3000/contacts'  
+3. for Q2, open 'http://localhost:3000/news'  
+  
+just fit the requirement and never over design
